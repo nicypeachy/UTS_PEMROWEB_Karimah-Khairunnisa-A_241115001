@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Saya</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Website Saya</h1>
+        <nav>
+            <a href="home.html" class="active">Home</a>
+            <a href="about.html">About</a>
+            <a href="riwayatpendidikan.html">Riwayat Pendidikan</a>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Home</h2>
+        <div class="welcome-box" id="welcomeBox">Selamat datang, Asep!</div>
+        <p><strong>Selamat Datang di Dunia saya</strong></p>
+       <p>
+            Saya tertarik pada bagaimana desain dan teknologi dapat bekerja bersama untuk menyelesaikan masalah nyata. 
+            Dari membuat alur pengguna yang efisien hingga menyusun antarmuka yang intuitif, setiap proses adalah bagian dari pembelajaran saya di bidang Sistem Informasi dan UI/UX Design.
+        </p>
+        <p>
+            Melalui website ini, saya membagikan hasil kerja, pengalaman, dan proses berpikir saya dalam merancang solusi digital. 
+            Fokus saya adalah menciptakan desain yang tidak hanya terlihat menarik, tetapi juga berfungsi dengan baik dan memberikan nilai bagi pengguna.
+        </p>
+
+    </main>
+
+    <script>
+        alert("Halo, selamat datang di website saya!");
+
+        var inputNama = prompt("Masukkan nama anda:");
+
+        if (inputNama && inputNama.trim() !== "") {
+            document.getElementById("welcomeBox").textContent = "Selamat datang, " + inputNama.trim() + "!";
+        } else {
+            alert("❌ Error: Anda harus mengisi nama sebelum melanjutkan!");
+            location.reload();
+        }
+
+        // Cari semua link di dalam nav
+        const navLinks = document.querySelectorAll('nav a');
+        const currentPage = window.location.pathname.split('/').pop(); // nama file halaman saat ini
+
+        navLinks.forEach(link => {
+            if (link.getAttribute('href') === currentPage) {
+            link.classList.add('active');
+            }
+        });
+    </script>
+</body>
+</html>

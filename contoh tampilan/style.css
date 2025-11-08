@@ -1,0 +1,173 @@
+ * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background-color: #e6ebff;
+        }
+
+        header {
+            background: linear-gradient(180deg, #2962ff, #4a7aff);
+            color: white;
+            text-align: center;
+            padding: 30px 30px;
+        }
+
+        header h1 {
+            font-size: 2.2rem;
+            font-weight: 700;
+            margin-bottom: 16px;
+        }
+
+        nav {
+            margin-top: 32px;
+            margin-bottom: 16px;
+        }
+
+        nav a {
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+            padding: 10px 20px;
+            border-radius: 30px;
+            transition: all 0.3s ease;
+        }
+
+        nav a:hover {
+            background: white;
+            color: #2962ff;
+        }
+
+        main {
+            max-width: 900px;
+            margin: 40px auto;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            padding: 40px;
+            text-align: center;
+        }
+
+        main h2 {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #333;
+            position: relative;
+            display: inline-block;
+            margin-bottom: 24px;
+        }
+
+        main h2::after {
+            content: "";
+            display: block;
+            width: 60%;
+            height: 3px;
+            background: #2962ff;
+            margin: 6px auto 0;
+            border-radius: 3px;
+        }
+/* 
+        .welcome-box {
+            background: #f8faff;
+            border-radius: 12px;
+            box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+            display: inline-block;
+            padding: 12px 20px;
+            margin: 20px 0;
+            font-weight: 600;
+            color: #2962ff;
+        } */
+
+        .welcome-box {
+            margin-top: 0px;
+            margin-bottom: 20px;
+            font-weight: 600;
+            color: #2962ff;
+            font-size: 1.1rem;
+            background: #f8faff;
+            padding: 12px 20px;
+            border-radius: 12px;
+            display: block; 
+            width: fit-content; 
+            margin-left: auto;
+            margin-right: auto; 
+            box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+            opacity: 0;
+            transform: translateY(10px);
+            animation: fadeIn 0.8s ease forwards;
+        }
+
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        p {
+            color: #444;
+            line-height: 1.7;
+            margin-bottom: 10px;
+        }
+
+        nav a.active {
+        background: white;
+        color: #2962ff;
+        font-weight: 600;
+        box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+        }
+
+        .edu-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 40px;
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        .edu-table th {
+            background: linear-gradient(180deg, #2962ff, #4a7aff);
+            color: white;
+            padding: 15px;
+            font-size: 1rem;
+            text-align: center;
+        }
+
+        .edu-table td {
+            padding: 14px;
+            text-align: center;
+            color: #333;
+            border-bottom: 1px solid #eee;
+        }
+
+        .edu-table tr:nth-child(even) {
+            background: #f4f8ff;
+        }
+
+        .edu-table tr:hover {
+            background: #e8f0ff;
+            transition: 0.3s ease;
+        }
+
+        /* ===== FOOTER ===== */
+        footer {
+            text-align: center;
+            background-color: #2c2f3a;
+            color: white;
+            padding: 20px 0;
+            margin-top: 60px;
+            font-size: 0.9rem;
+        }
+
+        /* Aktifkan highlight menu */
+        nav a.active {
+            background: white;
+            color: #2962ff;
+            font-weight: 600;
+        }

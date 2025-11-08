@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Saya</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Website Saya</h1>
+        <nav>
+            <a href="home.html" >Home</a>
+            <a href="about.html" >About</a>
+            <a href="riwayatpendidikan.html" class="active">Riwayat Pendidikan</a>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Riwayat Pendidikan</h2>
+
+        <table class="edu-table">
+            <thead>
+                <tr>
+                    <th>Tingkat</th>
+                    <th>Nama Sekolah</th>
+                    <th>Tahun Lulus</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>SD</strong></td>
+                    <td>SDN Sindang Sari</td>
+                    <td>2015</td>
+                </tr>
+                <tr>
+                    <td><strong>SMP</strong></td>
+                    <td>SMP IT Insan Mandiri</td>
+                    <td>2018</td>
+                </tr>
+                <tr>
+                    <td><strong>SMA</strong></td>
+                    <td>SMKN 9 Bandung</td>
+                    <td>2021</td>
+                </tr>
+                <tr>
+                    <td><strong>Perguruan Tinggi</strong></td>
+                    <td>Universitas Widyatama</td>
+                    <td>Ongoing</td>
+                </tr>
+            </tbody>
+        </table>
+    </main>
+
+    <script>
+        // Cari semua link di dalam nav
+        const navLinks = document.querySelectorAll('nav a');
+        const currentPage = window.location.pathname.split('/').pop(); // nama file halaman saat ini
+
+        navLinks.forEach(link => {
+            if (link.getAttribute('href') === currentPage) {
+            link.classList.add('active');
+            }
+        });
+    </script>
+</body>
+</html>

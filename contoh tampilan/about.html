@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Saya</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Website Saya</h1>
+        <nav>
+            <a href="home.html" >Home</a>
+            <a href="about.html" class="active">About</a>
+            <a href="riwayatpendidikan.html">Riwayat Pendidikan</a>
+        </nav>
+    </header>
+
+    <main>
+        <h2>About Me</h2>
+        <p><strong>Karimah Khairunnisa A - UI/UX Designer</strong></p>
+        <p>
+            Sebagai seorang mahasiswa Sistem Informasi yang berfokus pada bidang UI/UX Design, 
+            saya melihat dunia digital sebagai ruang di mana teknologi dan empati berpadu untuk menciptakan pengalaman yang bermakna bagi pengguna. 
+            Perjalanan akademis saya memperkenalkan pentingnya memahami kebutuhan pengguna, merancang solusi berbasis data, serta mengubah ide menjadi antarmuka yang intuitif dan menarik. 
+            Melalui berbagai proyek dan kolaborasi, saya belajar bahwa desain bukan hanya tentang tampilan, tetapi tentang bagaimana sebuah produk dapat menyelesaikan masalah dengan cara yang sederhana dan efektif.
+        </p>
+    </main>
+
+    <script>
+        // Cari semua link di dalam nav
+        const navLinks = document.querySelectorAll('nav a');
+        const currentPage = window.location.pathname.split('/').pop(); // nama file halaman saat ini
+
+        navLinks.forEach(link => {
+            if (link.getAttribute('href') === currentPage) {
+            link.classList.add('active');
+            }
+        });
+    </script>
+</body>
+</html>
